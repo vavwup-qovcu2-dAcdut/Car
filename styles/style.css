@@ -1,0 +1,225 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* width: 100vw; */
+}
+
+.bg {
+    width: 1042px;
+    height: 526px;
+    background: url(../images/background.jpg) no-repeat; 
+    border: 1px solid gray;
+    overflow: hidden;
+    position: relative;
+}
+
+.car {
+    content: "";
+    position: absolute;
+    left: -20px;
+    right: 0;
+    bottom: 20px;
+    background: url(../images/car_body.png) no-repeat center bottom / contain;
+    height: 162px;
+    z-index: 1000;
+    animation: car 4s normal infinite both;
+}
+
+.car:before {
+    content: "";
+    position: absolute;
+    left: -84px;
+    right: 200px;
+    bottom: 0px;
+    background: url(../images/wheel.png) no-repeat center bottom / contain;
+    height: 75px;
+    animation: wheel 4s normal infinite linear;
+}
+
+.car:after {
+    content: "";
+    position: absolute;
+    left: 120px;;
+    right: -200px;
+    bottom: 0px;
+    background: url(../images/wheel.png) no-repeat center bottom / contain;
+    height: 75px;
+    animation: wheel 4s normal infinite linear;
+}
+
+@keyframes car {
+    34% {
+        transform: translate(15px, 5px); 
+    }
+
+    70% {
+        transform: translate(10px, 3px); 
+    }
+}
+
+@keyframes wheel {
+    100% {
+        transform: rotate(720deg);
+    }
+}
+
+.mountains {
+    position: absolute;
+    left: 1050px;
+    bottom: 135px;
+    background: url(../images/mountains.png) no-repeat center / contain; 
+    width: 371px;
+    height: 175px; 
+    z-index: 10;  
+    animation: mountains 120s reverse infinite linear;    
+}
+
+@keyframes mountains {
+    0% {
+        transform: translate(-2000px, 0)
+    }
+}
+
+.tree1, .tree2, .tree3, .tree4 {
+    position: absolute;
+    left: 1050px;
+    background: url(../images/tree.png) no-repeat center / contain;
+}
+
+.tree1 {
+    bottom: 100px;
+    padding: 90px;
+    animation: tree1 10s reverse infinite linear;
+    z-index: 900;
+}
+
+.tree1:after {
+    content: "";
+    position: absolute;
+    left: 600px;
+    bottom: 0;
+    padding: 90px;
+    background: url(../images/tree.png) no-repeat center / contain;
+}
+
+@keyframes tree1 {
+    0% {
+        transform: translate(-2000px, 0)
+    }
+}
+
+.tree2 {
+    bottom: 120px;
+    padding: 60px;
+    animation: tree2 20s reverse 0.5s infinite linear;
+    z-index: 800;
+}
+
+.tree2:after {
+    content: "";
+    position: absolute;
+    left: 500px;
+    bottom: 0;
+    padding: 60px;
+    background: url(../images/tree.png) no-repeat center / contain;
+}
+
+@keyframes tree2 {
+    0% {
+        transform: translate(-2000px, 0)
+    }
+}
+
+.tree3 {
+    bottom: 125px;
+    padding: 50px;
+    animation: tree3 30s reverse 3s infinite linear;
+    z-index: 700;
+}
+
+.tree3:after {
+    content: "";
+    position: absolute;
+    left: 700px;
+    bottom: 0;
+    padding: 50px;
+    background: url(../images/tree.png) no-repeat center / contain;
+}
+
+@keyframes tree3 {
+    0% {
+        transform: translate(-2000px, 0)
+    }
+}
+
+.tree4 {
+    bottom: 135px;
+    padding: 40px;
+    animation: tree4 50s reverse 2s infinite linear;
+    z-index: 600;
+}
+
+.tree4:after {
+    content: "";
+    position: absolute;
+    left: 750px;
+    bottom: 0;
+    padding: 40px;
+    background: url(../images/tree.png) no-repeat center / contain;
+}
+
+@keyframes tree4 {
+    0% {
+        transform: translate(-2000px, 0)
+    }
+}
+
+.cloud1 {
+    position: absolute;
+    left: 1050px;
+    bottom: 300px;
+    z-index: 850;
+    padding: 90px;
+    animation: tree1 50s reverse 1s infinite linear;
+    background: url(../images/cloud1.png) no-repeat center / contain;
+}
+
+.cloud2 {
+    position: absolute;
+    left: 1050px;
+    bottom: 320px;
+    z-index: 750;
+    padding: 80px;
+    animation: tree1 75s reverse 3.5s infinite linear;
+    background: url(../images/cloud2.png) no-repeat center / contain;
+}
+
+.cloud3 {
+    position: absolute;
+    left: 1050px;
+    bottom: 280px;
+    z-index: 650;
+    padding: 60px;
+    animation: tree1 90s reverse 7s infinite linear;
+    background: url(../images/cloud3.png) no-repeat center / contain;
+}
+
+.cloud4 {
+    position: absolute;
+    left: 1050px;
+    bottom: 250px;
+    z-index: 5;
+    padding: 30px;
+    animation: tree1 150s reverse 9s infinite linear;
+    background: url(../images/cloud4.png) no-repeat center / contain;
+}
+
+
